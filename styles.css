@@ -1,0 +1,10 @@
+.sidebar {
+    width: 45%;
+    background: darkviolet;
+    height: 100%;
+}
+
+.arrow {
+    border-top: 1px solid #fff;
+
+}

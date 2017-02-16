@@ -1,0 +1,32 @@
+@import "reset";
+@import "colors";
+@import "aside";
+@import "messages";
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: Arial, serif;
+	font-size: 20px;
+	&.clearfix {
+		clear: both;
+		&::before,
+		&::after {
+			content: "";
+			display: table;
+		}
+		&::after {
+			clear: both;
+		}
+	}
+}
+
+input[type="text"]{
+	border: none;
+	border-radius: 15px;
+	background-color: $my-message-bg;
+	padding: 2px 5px;
+}

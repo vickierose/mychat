@@ -1,0 +1,152 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+aside {
+  background-color: #3b3e99;
+  color: #fff;
+  float: left;
+  width: 40%; }
+  aside header {
+    padding: 10px; }
+    aside header div,
+    aside header input {
+      vertical-align: middle; }
+    aside header .btn {
+      display: inline-block;
+      width: 30px;
+      height: 30px; }
+    aside header .arrow-btn {
+      margin-left: 10px;
+      float: left; }
+      aside header .arrow-btn .arrow {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        transform: rotate(-45deg); }
+    aside header .search-field {
+      width: 50%; }
+    aside header .sandwich-btn {
+      position: relative;
+      float: right;
+      margin-right: 10px;
+      padding-left: 1.25em; }
+      aside header .sandwich-btn::before {
+        content: "";
+        position: absolute;
+        top: 0.25em;
+        left: 0;
+        width: 1em;
+        height: 0.125em;
+        border-top: 0.375em double #fff;
+        border-bottom: 0.125em solid #fff; }
+  aside .contact {
+    padding: 15px 15px; }
+    aside .contact:hover {
+      background-color: #484cc4; }
+    aside .contact
+    div {
+      display: inline-block;
+      margin: 0 5px;
+      vertical-align: middle; }
+    aside .contact .photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-image: url("../pics/girl2.png"); }
+    aside .contact .user-info {
+      min-width: 50%; }
+    aside .contact h1 {
+      font-size: .6em; }
+    aside .contact p {
+      font-size: .5em; }
+    aside .contact .timer {
+      font-size: .5em;
+      background-color: #3a3c8e;
+      border-radius: 10px;
+      width: 35px;
+      padding: 2px 0;
+      text-align: center;
+      margin-left: 15px; }
+  aside .active {
+    background-color: #f23f79; }
+    aside .active:hover {
+      background-color: #f23f79; }
+    aside .active .timer {
+      background-color: #fff;
+      color: #f23f79; }
+
+.message-field-container {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  left: 40%;
+  padding: 10px; }
+  .message-field-container input {
+    width: 45%;
+    height: 30px;
+    margin-left: 20px; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, serif;
+  font-size: 20px; }
+  body.clearfix {
+    clear: both; }
+    body.clearfix::before, body.clearfix::after {
+      content: "";
+      display: table; }
+    body.clearfix::after {
+      clear: both; }
+
+input[type="text"] {
+  border: none;
+  border-radius: 15px;
+  background-color: #f1f1fb;
+  padding: 2px 5px; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -129,6 +129,10 @@ aside {
     height: 30px;
     margin-left: 20px; }
 
+.form-content {
+  display: flex;
+  flex-direction: column; }
+
 * {
   box-sizing: border-box; }
 

@@ -1,98 +1,50 @@
-aside {
-	background-color: $aside-bg-col;
-	color: $main-text-color;
-	float: left;
-	width: 40%;
-	header{
-		padding: 10px;
-		div,
-		input {
-			vertical-align: middle;
-		}
-
-		.btn {
+aside{
+		background-color: $aside-bg-violet;
+		color: $main-text-white;
+		width: 40%;
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+		header{
+			display: flex;
+			justify-content: space-between;
+			padding: 0.5rem;
+			.btn {
 			display: inline-block;
 			width: 30px;
 			height: 30px;
-		}
-		.arrow-btn{
-			margin-left: 10px;
-			float: left;
-			.arrow{
-				display: inline-block;
-				width: 10px;
-				height: 10px;
-				border-top: 1px solid $main-text-color;
-				border-left: 1px solid $main-text-color;
-				transform: rotate(-45deg);
 			}
-		}
-		.search-field{
-			width: 50%;
-		}
-		.sandwich-btn {
-			position: relative;
-			float: right;
-			margin-right: 10px;
-  			padding-left: 1.25em;
+					.arrow-btn{
+						margin-left: 10px;
+						float: left;
+						.arrow{
+							display: inline-block;
+							width: 10px;
+							height: 10px;
+							border-top: 1px solid $icons-white;
+							border-left: 1px solid $icons-white;
+							transform: rotate(-45deg);
+						}
+					}
+					.search-field{
+						width: 50%;
+					}
+					.sandwich-btn {
+						position: relative;
+						float: right;
+						margin-right: 10px;
+			  			padding-left: 1.25em;
 
-  			&::before {
-  				content: "";
-				position: absolute;
-				top: 0.25em;
-				left: 0;
-				width: 1em;
-				height: 0.125em;
-				border-top: 0.375em double $main-text-color;
-				border-bottom: 0.125em solid $main-text-color;
-  			}
-		}
-	}
-
-	.contact{
-		padding: 15px 15px;
-		&:hover {
-			background-color: $hover-bg;
-		}
-		& 
-		div {
-			display: inline-block;
-			margin: 0 5px;
-			vertical-align: middle;
-		}
-		.photo{
-			width: 40px;
-			height: 40px;
-			border-radius: 50%;
-			background-image:url("../pics/girl2.png") 
-		}
-		.user-info {
-			min-width: 50%;
-		}
-		h1 {
-			font-size: .6em;
-		}
-		p{
-			font-size: .5em;
-		}
-		.timer {
-			font-size: .5em;
-			background-color: $timer-bg;
-			border-radius: 10px;
-			width: 35px;
-			padding: 2px 0;
-			text-align: center;
-			margin-left: 15px;
-		}
-	}
-	.active {
-			background-color: $active-bg;
-			&:hover {
-				background-color: $active-bg;
+			  			&::before {
+			  				content: "";
+							position: absolute;
+							top: 0.25em;
+							left: 0;
+							width: 1em;
+							height: 0.125em;
+							border-top: 0.375em double $icons-white;
+							border-bottom: 0.125em solid $icons-white;
+			  			}
+			  		}
+				}
 			}
-			.timer{
-				background-color:$main-text-color;
-				color: $active-bg;
-			}
-		}
-}

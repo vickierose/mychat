@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	// height:100%;
+	font-family: Arial, serif;
+	font-size: $font-base;
+}
+body {
+	// height: 100%;
+	
+	display: flex;
+	align-items: stretch;
+}
+
+input{
+    height: 1.2rem;
+    padding-left: .5rem;
+    
+}
+
+button {
+	border-radius: .75rem;
+	background-color: $buttons-bg-violet;
+	color: $main-text-white;
+	height: 1.5rem;
+	&:hover {
+		background-color: $hover-bg;
+	}
+}

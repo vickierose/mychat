@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="assets/stylesheets/mainstyles.css">
+</head>
+<body>
+	<div class="forms-content">
+		<nav>
+			<ul>
+				<li class="active-tab" onclick="changeTab(tabHeadings[0], tabHeadings[1], logInForm, signInForm)">Log in</li>
+				<li onclick="changeTab(tabHeadings[1], tabHeadings[0], signInForm, logInForm)">Sign in</li>
+			</ul>
+		</nav>
+		<form class="log-in-form">
+			<label for="login-field">Login</label> 
+			<input type="text" id="login-field">
+			<label for="password-field">Password</label>
+			<input type="password" id="password-field">
+			<button>Log in</button>
+			<div class="a-container">
+				<a href="#">Forgot password?</a>
+				<a href="#">Learn more...</a>
+			</div>
+		</form>
+
+		<form class="sign-in-form">
+			<label for="new-email-field">Email</label>
+			<input type="email" id="new-email-field">
+			<label for="new-login-field">Login</label>
+			<input type="text" id="new-login-field">
+			<label for="new-password-field">Create password</label>
+			<input type="password" id="new-password-field">
+			<label for="confirm-new-password-field">Confirm password</label>
+			<input type="password" id="confirm-new-password-field">
+			<button>Sign in</button>
+			<a href="#">Learn more...</a>
+		</form>
+	</div>
+
+	<script type="text/javascript" src="assets/scripts/forms.js"></script>
+</body>
+</html>

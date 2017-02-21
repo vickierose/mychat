@@ -6,7 +6,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas,
 figure, figcaption, footer, header,
-nav, output, section, input, button,
+nav, output, section, input, .chat-page textarea, button,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -32,20 +32,24 @@ table {
 a {
   text-decoration: none; }
 
+textarea {
+  resize: none; }
+
 * {
   box-sizing: border-box; }
 
 html {
+  height: 100%;
   font-family: Arial, serif;
   font-size: 20px; }
 
 body {
-  display: flex;
-  align-items: stretch; }
+  height: 100%; }
 
-input {
+input, .chat-page textarea {
   height: 1.2rem;
-  padding-left: .5rem; }
+  padding-left: .5rem;
+  outline: none; }
 
 button {
   border-radius: .75rem;
@@ -54,6 +58,24 @@ button {
   height: 1.5rem; }
   button:hover {
     background-color: #484cc4; }
+
+.chat-page {
+  align-items: stretch;
+  display: flex;
+  min-height: 100%;
+  font-size: .8rem;
+  width: 100%; }
+  .chat-page input, .chat-page textarea {
+    background-color: #f1f1fb;
+    border-radius: .75rem;
+    font-size: .6rem; }
+  .chat-page textarea {
+    resize: none; }
+  .chat-page .photo {
+    background: url("../pics/beagle.jpg");
+    border-radius: 50%;
+    height: 40px;
+    width: 40px; }
 
 .forms-content {
   border: 1px solid #989ad7;
@@ -94,7 +116,7 @@ button {
       margin: .35em .8rem; }
     .forms-content form label {
       margin-top: 1rem; }
-    .forms-content form input {
+    .forms-content form input, .forms-content form .chat-page textarea, .chat-page .forms-content form textarea {
       border-bottom: 1px solid #3b3e99; }
     .forms-content form button {
       margin-top: 1rem;
@@ -119,15 +141,13 @@ aside {
   aside header {
     display: flex;
     justify-content: space-between;
+    margin: .25rem 0;
     padding: 0.5rem; }
-    aside header .btn {
-      display: inline-block;
-      width: 30px;
-      height: 30px; }
-    aside header .arrow-btn {
-      margin-left: 10px;
-      float: left; }
-      aside header .arrow-btn .arrow {
+    aside header .arrow-icon, aside header .sandwich-icon {
+      min-width: 40px;
+      min-height: 40px;
+      text-align: center; }
+      aside header .arrow-icon .arrow-image, aside header .sandwich-icon .arrow-image {
         display: inline-block;
         width: 10px;
         height: 10px;
@@ -135,20 +155,100 @@ aside {
         border-left: 1px solid #fff;
         transform: rotate(-45deg); }
     aside header .search-field {
-      width: 50%; }
-    aside header .sandwich-btn {
+      flex-grow: 1;
+      margin-left: .8rem;
+      margin-right: 1rem; }
+      aside header .search-field input, aside header .search-field .chat-page textarea, .chat-page aside header .search-field textarea {
+        width: 100%; }
+    aside header .sandwich-icon {
+      font-size: 1rem;
+      padding-left: 1.5em;
       position: relative;
-      float: right;
-      margin-right: 10px;
-      padding-left: 1.25em; }
-      aside header .sandwich-btn::before {
-        content: "";
+      margin-right: .4rem; }
+      aside header .sandwich-icon::before {
         position: absolute;
         top: 0.25em;
         left: 0;
         width: 1em;
-        height: 0.125em;
         border-top: 0.375em double #fff;
-        border-bottom: 0.125em solid #fff; }
+        border-bottom: 0.125em solid #fff;
+        content: "";
+        height: 0.125em; }
+  aside .contact-list ul {
+    display: flex;
+    flex-direction: column; }
+  aside .contact-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: .5em .5rem; }
+    aside .contact-list li .user-info {
+      flex-grow: 1;
+      margin: 0 .8rem; }
+      aside .contact-list li .user-info p {
+        font-size: .7em; }
+      aside .contact-list li .user-info .user-name {
+        font-size: .8em; }
+    aside .contact-list li .timer {
+      align-self: center;
+      background-color: #3a3c8e;
+      border-radius: 15px;
+      font-size: .6em;
+      margin-right: 1rem;
+      min-width: 40px;
+      padding: .5em .4rem;
+      text-align: center; }
+  aside .contact-list .active {
+    background-color: #f23f79; }
+    aside .contact-list .active .timer {
+      background-color: #fff;
+      color: #f23f79; }
+
+.messages-part {
+  display: flex;
+  flex-direction: column;
+  width: 60%; }
+  .messages-part .conversation {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column; }
+    .messages-part .conversation .message {
+      display: flex;
+      font-size: .7rem;
+      margin: 1rem; }
+      .messages-part .conversation .message .photo {
+        align-self: flex-end; }
+      .messages-part .conversation .message .message-text {
+        border-radius: .75rem;
+        padding: .5rem .7em;
+        max-width: 50%;
+        position: relative; }
+        .messages-part .conversation .message .message-text .time {
+          position: absolute;
+          color: lightgrey;
+          bottom: -1rem;
+          font-size: .5rem; }
+    .messages-part .conversation .incoming-message {
+      color: #fff; }
+      .messages-part .conversation .incoming-message .photo {
+        margin-right: .5rem; }
+      .messages-part .conversation .incoming-message .message-text {
+        background-color: #989ad7; }
+        .messages-part .conversation .incoming-message .message-text .time {
+          right: 0; }
+    .messages-part .conversation .outcoming-message {
+      justify-content: flex-end; }
+      .messages-part .conversation .outcoming-message .photo {
+        order: 2;
+        margin-left: .5rem; }
+      .messages-part .conversation .outcoming-message .message-text {
+        background-color: #f1f1fb; }
+        .messages-part .conversation .outcoming-message .message-text .time {
+          left: 0; }
+  .messages-part .message-field-container textarea {
+    border-radius: 1.5rem;
+    height: 2rem;
+    margin: 1rem;
+    padding: 1em .5rem;
+    width: 70%; }
 
 /*# sourceMappingURL=mainstyles.css.map */

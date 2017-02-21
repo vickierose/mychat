@@ -1,50 +1,104 @@
-aside{
-		background-color: $aside-bg-violet;
-		color: $main-text-white;
-		width: 40%;
-		min-height: 100%;
+aside {
+	background-color: $aside-bg-violet;
+	color: $main-text-white;
+	width: 40%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	header{
 		display: flex;
-		flex-direction: column;
-		header{
+		justify-content: space-between;
+		margin: .25rem 0;
+		padding: 0.5rem;
+
+		.arrow-icon {
+			min-width: 40px;
+			min-height: 40px;
+			text-align: center;
+
+			.arrow-image {        //it's an image of arrow by itself.
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				border-top: 1px solid $icons-white;
+				border-left: 1px solid $icons-white;
+				transform: rotate(-45deg);
+			}
+		}
+
+		.search-field {
+			flex-grow: 1;
+    		margin-left: .8rem;
+    		margin-right: 1rem;
+
+			input {
+				width: 100%;
+			}
+		}
+
+		.sandwich-icon {
+			@extend .arrow-icon;
+			font-size: 1rem;
+		  	padding-left: 1.5em;
+		  	position: relative;
+		  	margin-right: .4rem;
+
+		 	&::before {
+				position: absolute;
+				top: 0.25em;
+				left: 0;
+				width: 1em;
+				border-top: 0.375em double $icons-white;
+				border-bottom: 0.125em solid $icons-white;
+				content: "";
+				height: 0.125em;
+		  	}
+		}
+	}
+
+	.contact-list {
+		ul {
+			display: flex;
+			flex-direction: column;
+		}
+
+		li {
 			display: flex;
 			justify-content: space-between;
-			padding: 0.5rem;
-			.btn {
-			display: inline-block;
-			width: 30px;
-			height: 30px;
-			}
-					.arrow-btn{
-						margin-left: 10px;
-						float: left;
-						.arrow{
-							display: inline-block;
-							width: 10px;
-							height: 10px;
-							border-top: 1px solid $icons-white;
-							border-left: 1px solid $icons-white;
-							transform: rotate(-45deg);
-						}
-					}
-					.search-field{
-						width: 50%;
-					}
-					.sandwich-btn {
-						position: relative;
-						float: right;
-						margin-right: 10px;
-			  			padding-left: 1.25em;
+			padding: .5em .5rem;
 
-			  			&::before {
-			  				content: "";
-							position: absolute;
-							top: 0.25em;
-							left: 0;
-							width: 1em;
-							height: 0.125em;
-							border-top: 0.375em double $icons-white;
-							border-bottom: 0.125em solid $icons-white;
-			  			}
-			  		}
+			.user-info {
+				flex-grow: 1;
+				margin: 0 .8rem;
+				p {
+					font-size: .7em;
+				}
+
+				.user-name {
+					font-size: .8em;
 				}
 			}
+
+			.timer {
+				align-self: center;
+				background-color: $timer-bg;
+				border-radius: 15px;
+				font-size: .6em;
+				margin-right: 1rem;
+				min-width: 40px;
+    			padding: .5em .4rem;
+    			text-align: center;
+			}
+		}
+
+		.active {
+			background-color:$active-bg;
+			.timer {
+				background-color: $active-timer-bg-white;
+				color: $active-timer-text-pink;
+			}
+		}
+	}
+
+}

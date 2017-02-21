@@ -1,0 +1,81 @@
+.messages-part {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+
+	.conversation {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+
+		.message {
+			display: flex;
+			font-size: .7rem;
+			margin: 1rem;
+
+
+			.photo {
+				align-self: flex-end;
+			}
+
+			.message-text {
+    			border-radius: .75rem;
+   				padding: .5rem .7em;
+    			max-width: 50%;
+    			position: relative;
+
+    			.time {
+    				position: absolute;
+    				color: lightgrey;
+    				bottom: -1rem;
+    				font-size: .5rem;
+    			}
+			}
+		}
+
+		.incoming-message {
+			color: $main-text-white;
+			.photo {
+    			margin-right: .5rem;
+			}
+
+			.message-text {
+				background-color: $message-from-bg;
+
+				.time {
+					right: 0;
+				}
+    			
+			}
+		}
+
+		.outcoming-message {
+			justify-content: flex-end;
+
+			.photo {
+				order: 2;
+				margin-left: .5rem;
+			}
+
+			.message-text {
+				background-color: $my-message-bg;
+
+				.time {
+					left: 0;
+				}
+			}
+		}
+
+	}
+
+	.message-field-container {
+		textarea {
+			border-radius: 1.5rem;
+    		height: 2rem;
+    		margin: 1rem;
+    		padding: 1em .5rem;
+    		width: 70%;
+		}
+	}
+}
+

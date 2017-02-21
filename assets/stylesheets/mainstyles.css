@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 html, body, div, span, iframe,
 h1, h2, h3, h4, h5, h6, p, a, em, img,
 small, strike, strong, b, i,
@@ -35,9 +38,6 @@ a {
 textarea {
   resize: none; }
 
-* {
-  box-sizing: border-box; }
-
 html {
   height: 100%;
   font-family: Arial, serif;
@@ -48,8 +48,8 @@ body {
 
 input, .chat-page textarea {
   height: 1.2rem;
-  padding-left: .5rem;
-  outline: none; }
+  outline: none;
+  padding-left: .5rem; }
 
 button {
   border-radius: .75rem;
@@ -72,10 +72,12 @@ button {
   .chat-page textarea {
     resize: none; }
   .chat-page .photo {
-    background: url("../pics/beagle.jpg");
+    background: url("../pics/beagle.png");
+    background-position: -12px 0;
+    background-repeat: no-repeat;
     border-radius: 50%;
     height: 40px;
-    width: 40px; }
+    min-width: 40px; }
 
 .forms-content {
   border: 1px solid #989ad7;
@@ -134,10 +136,13 @@ button {
 aside {
   background-color: #3b3e99;
   color: #fff;
-  width: 40%;
-  min-height: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: width 300ms linear;
+  width: 40%; }
   aside header {
     display: flex;
     justify-content: space-between;
@@ -147,33 +152,54 @@ aside {
       min-width: 40px;
       min-height: 40px;
       text-align: center; }
-      aside header .arrow-icon .arrow-image, aside header .sandwich-icon .arrow-image {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-top: 1px solid #fff;
-        border-left: 1px solid #fff;
-        transform: rotate(-45deg); }
+    aside header .arrow-image {
+      border-left: 1px solid #fff;
+      border-top: 1px solid #fff;
+      display: inline-block;
+      height: 10px;
+      transform: rotate(-45deg);
+      transition: transform 200ms linear;
+      width: 10px; }
     aside header .search-field {
       flex-grow: 1;
       margin-left: .8rem;
-      margin-right: 1rem; }
+      margin-right: 1rem;
+      text-align: center; }
       aside header .search-field input, aside header .search-field .chat-page textarea, .chat-page aside header .search-field textarea {
-        width: 100%; }
+        width: 75%; }
     aside header .sandwich-icon {
       font-size: 1rem;
+      margin-right: .4rem;
       padding-left: 1.5em;
-      position: relative;
-      margin-right: .4rem; }
+      position: relative; }
       aside header .sandwich-icon::before {
+        border-bottom: 0.125em solid #fff;
+        border-top: 0.375em double #fff;
+        content: "";
+        height: 0.125em;
+        left: 0;
         position: absolute;
         top: 0.25em;
-        left: 0;
-        width: 1em;
-        border-top: 0.375em double #fff;
-        border-bottom: 0.125em solid #fff;
-        content: "";
-        height: 0.125em; }
+        width: 1em; }
+  aside .menu {
+    background-color: #fff;
+    box-shadow: 0 0 0.5rem #989ad7;
+    display: none;
+    position: absolute;
+    right: 1.7rem;
+    top: 2.25rem; }
+    aside .menu li {
+      border-bottom: 1px solid #989ad7; }
+    aside .menu a {
+      color: #3b3e99;
+      display: inline-block;
+      padding: .5em 1.5rem;
+      width: 100%; }
+      aside .menu a:hover {
+        background-color: #484cc4;
+        color: #fff; }
+  aside .showed-menu {
+    display: block; }
   aside .contact-list ul {
     display: flex;
     flex-direction: column; }
@@ -181,6 +207,8 @@ aside {
     display: flex;
     justify-content: space-between;
     padding: .5em .5rem; }
+    aside .contact-list li:hover {
+      background-color: #484cc4; }
     aside .contact-list li .user-info {
       flex-grow: 1;
       margin: 0 .8rem; }
@@ -197,16 +225,23 @@ aside {
       min-width: 40px;
       padding: .5em .4rem;
       text-align: center; }
-  aside .contact-list .active {
+  aside .contact-list .active-user {
     background-color: #f23f79; }
-    aside .contact-list .active .timer {
+    aside .contact-list .active-user:hover {
+      background-color: #f23f79; }
+    aside .contact-list .active-user .timer {
       background-color: #fff;
       color: #f23f79; }
+
+.closed-state {
+  width: 60px; }
+  .closed-state header .arrow-image {
+    transform: rotate(135deg); }
 
 .messages-part {
   display: flex;
   flex-direction: column;
-  width: 60%; }
+  flex-grow: 1; }
   .messages-part .conversation {
     display: flex;
     flex-grow: 1;
@@ -218,8 +253,8 @@ aside {
       .messages-part .conversation .message .photo {
         align-self: flex-end; }
       .messages-part .conversation .message .message-text {
-        border-radius: .75rem;
-        padding: .5rem .7em;
+        border-radius: .25rem;
+        padding: 1.25rem 2em;
         max-width: 50%;
         position: relative; }
         .messages-part .conversation .message .message-text .time {
@@ -248,7 +283,7 @@ aside {
     border-radius: 1.5rem;
     height: 2rem;
     margin: 1rem;
-    padding: 1em .5rem;
+    padding: 1em 1rem;
     width: 70%; }
 
 /*# sourceMappingURL=mainstyles.css.map */

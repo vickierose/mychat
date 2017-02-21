@@ -1,7 +1,7 @@
 .messages-part {
 	display: flex;
 	flex-direction: column;
-	width: 60%;
+	flex-grow: 1;
 
 	.conversation {
 		display: flex;
@@ -19,8 +19,8 @@
 			}
 
 			.message-text {
-    			border-radius: .75rem;
-   				padding: .5rem .7em;
+    			border-radius: .25rem;
+   				padding: 1.25rem 2em;
     			max-width: 50%;
     			position: relative;
 
@@ -73,7 +73,7 @@
 			border-radius: 1.5rem;
     		height: 2rem;
     		margin: 1rem;
-    		padding: 1em .5rem;
+    		padding: 1em 1rem;
     		width: 70%;
 		}
 	}

@@ -62,8 +62,8 @@ button {
 .chat-page {
   align-items: stretch;
   display: flex;
-  min-height: 100%;
   font-size: .8rem;
+  min-height: 100%;
   width: 100%; }
   .chat-page input, .chat-page textarea {
     background-color: #f1f1fb;
@@ -86,8 +86,16 @@ button {
   display: flex;
   flex-direction: column;
   font-size: .8rem;
-  margin: 40px;
+  margin: auto;
+  margin-top: 25%;
   width: 300px; }
+  @media screen and (max-width: 420px) {
+    .forms-content {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      margin: 0;
+      width: 100vw; } }
   .forms-content nav {
     border-bottom: 1px solid #989ad7; }
   .forms-content ul {
@@ -100,8 +108,14 @@ button {
       .forms-content ul li:first-child {
         border-radius: 10px 0 0 0;
         border-right: 1px solid #989ad7; }
+        @media screen and (max-width: 420px) {
+          .forms-content ul li:first-child {
+            border-radius: 0; } }
       .forms-content ul li:last-child {
         border-radius: 0 10px 0 0; }
+        @media screen and (max-width: 420px) {
+          .forms-content ul li:last-child {
+            border-radius: 0; } }
       .forms-content ul li:hover {
         background-color: #484cc4;
         color: #fff; }
@@ -143,6 +157,12 @@ aside {
   position: relative;
   transition: width 300ms linear;
   width: 40%; }
+  @media screen and (max-width: 420px) {
+    aside {
+      width: 100vw; } }
+  @media screen and (min-width: 421px) and (max-width: 1030px) {
+    aside {
+      width: 50%; } }
   aside header {
     display: flex;
     justify-content: space-between;
@@ -241,7 +261,14 @@ aside {
 .messages-part {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; }
+  flex-grow: 1;
+  overflow: hidden; }
+  @media screen and (max-width: 420px) {
+    .messages-part {
+      width: 0; } }
+  @media screen and (min-width: 421px) and (max-width: 1030px) {
+    .messages-part {
+      width: 50%; } }
   .messages-part .conversation {
     display: flex;
     flex-grow: 1;

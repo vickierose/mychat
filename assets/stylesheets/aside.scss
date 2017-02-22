@@ -9,6 +9,14 @@ aside {
 	transition: width 300ms linear;
 	width: 40%;
 
+	@media screen and (max-width: 420px) {
+		width: 100vw;
+	}
+
+	@media screen and (min-width: 421px) and (max-width:1030px) {
+		width: 50%;
+	}
+
 	header{
 		display: flex;
 		justify-content: space-between;
@@ -144,6 +152,7 @@ aside {
 
 .closed-state {
 	width: 60px;
+
 	header {
 		.arrow-image {
 			transform: rotate(135deg);

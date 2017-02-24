@@ -1,0 +1,28 @@
+@import "mixins";
+
+.menu {
+		background-color: #fff;
+		box-shadow: 0 0 0.5rem $menu-shadow-violet;
+		display: none;
+		position: absolute;
+		right: 1.7rem;
+    	top: 2.25rem;
+
+    	li {
+    		border-bottom: 1px solid $forms-border-violet;
+    	}
+    
+		a {	
+			display: inline-block;
+			padding: .5em 1.5rem;
+			width: 100%;
+			&:hover {
+				background-color: $hover-bg;
+				color: $main-text-white; 
+			}
+		}
+	}
+
+	.aside__menu--showed {
+		display: block;
+	}

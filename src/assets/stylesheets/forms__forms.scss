@@ -1,0 +1,43 @@
+@import "mixins";
+
+.forms-content {
+	form {
+		@include display-flex (column);
+
+		@media screen and (max-width: 420px){
+
+		}
+
+		* {
+			margin: .35em .8rem;
+		}
+	}
+
+	label {
+		margin-top: 1rem;
+	}
+
+	input {
+		border-bottom: 1px solid $input-underline-violet;
+	}
+
+	button {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.a-container{
+		@include display-flex (row);
+	}
+
+	a {
+		font-size: .7rem;
+		&:hover {
+			color: $a-hover-text-color;
+		}
+	}
+
+	.sign-in-form {
+		display: none;
+	}
+}

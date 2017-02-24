@@ -1,0 +1,50 @@
+@import "mixins";
+
+.forms-content {
+	nav {
+		border-bottom: 1px solid $forms-border-violet;
+	}
+
+	ul {
+		@include display-flex (row);
+	}
+		
+	li {
+		background-color: $forms-tab-buttons-bg;
+		flex-grow: 1;
+	    padding: .75rem;
+	    text-align: center;
+
+	    &:first-child {
+		    border-radius: 10px 0 0 0;
+		   	border-right: 1px solid $forms-border-violet;
+
+		    @media screen and (max-width: 420px) {
+		    	border-radius: 0;
+		    }
+		}
+
+		&:last-child {
+		    border-radius: 0 10px 0 0;
+
+		    @media screen and (max-width: 420px) {
+		    	border-radius: 0;
+		    }
+		}
+
+		&:hover {
+		    background-color: $hover-bg;
+		   	color: $main-text-white;
+		}
+	}
+		
+	.tab--active{
+		background-color: $active-tab-bg;
+		box-shadow: 0 0 5px $forms-border-violet;
+		color: $main-text-white;
+		
+		&:hover {
+			background-color: $active-tab-bg;
+		}
+	}	
+}

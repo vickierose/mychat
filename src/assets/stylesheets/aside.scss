@@ -1,0 +1,26 @@
+@import "mixins";
+aside {
+	@include display-flex (column);
+	background-color: $aside-bg-violet;
+	color: $main-text-white;
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+	transition: width 300ms linear;
+	width: 40%;
+
+	@media screen and (max-width: 420px) {
+		width: 100vw;
+	}
+
+	@media screen and (min-width: 421px) and (max-width:1030px) {
+		width: 50%;
+	}
+}
+	
+.aside--closed {
+	width: 60px;
+	.arrow-image {
+		transform: rotate(135deg);
+	}
+}

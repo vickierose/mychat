@@ -1,0 +1,274 @@
+html, body, footer, header,
+div, section, article, aside, nav,
+span, p, a,
+ol, ul, li, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+input,
+.chat-page textarea, button, textarea,
+img, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, footer, header, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  height: 100%;
+  font-family: Arial, serif;
+  font-size: 20px; }
+
+body {
+  height: 100%; }
+
+input, .chat-page textarea {
+  height: 1.2rem;
+  outline: none;
+  padding-left: .5rem; }
+
+textarea {
+  resize: none; }
+
+button {
+  border-radius: .75rem;
+  background-color: #989ad7;
+  color: #fff;
+  height: 1.5rem; }
+  button:hover {
+    background-color: #484cc4; }
+
+a {
+  color: #3b3e99;
+  text-decoration: none; }
+
+.chat-page {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  font-size: .8rem;
+  min-height: 100%;
+  width: 100%; }
+  .chat-page input, .chat-page textarea {
+    background-color: #f1f1fb;
+    border-radius: .75rem;
+    font-size: .6rem; }
+  .chat-page .photo {
+    background: url("../pics/beagle.png");
+    background-position: -12px 0;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 40px;
+    min-width: 40px; }
+
+.forms-content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #989ad7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #989ad7;
+  font-size: .8rem;
+  margin: auto;
+  margin-top: 25%;
+  width: 300px; }
+  @media screen and (max-width: 420px) {
+    .forms-content {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      margin: 0;
+      width: 100vw; } }
+
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: #3b3e99;
+  color: #fff;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: width 300ms linear;
+  width: 40%; }
+  @media screen and (max-width: 420px) {
+    aside {
+      width: 100vw; } }
+  @media screen and (min-width: 421px) and (max-width: 1030px) {
+    aside {
+      width: 50%; } }
+
+.aside--closed {
+  width: 60px; }
+  .aside--closed .arrow-image {
+    transform: rotate(135deg); }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: .25rem 0;
+  padding: 0.5rem; }
+  header .arrow-icon, header .sandwich-icon {
+    min-width: 40px;
+    min-height: 40px;
+    text-align: center; }
+  header .arrow-image {
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+    display: inline-block;
+    height: 10px;
+    transform: rotate(-45deg);
+    transition: transform 200ms linear;
+    width: 10px; }
+  header .search-field {
+    flex-grow: 1;
+    margin-left: .8rem;
+    margin-right: 1rem;
+    text-align: center; }
+  header input, header .chat-page textarea, .chat-page header textarea {
+    width: 75%; }
+  header .sandwich-icon {
+    font-size: 1rem;
+    margin-right: .4rem;
+    padding-left: 1.5em;
+    position: relative; }
+    header .sandwich-icon::before {
+      border-bottom: 0.125em solid #fff;
+      border-top: 0.375em double #fff;
+      content: "";
+      height: 0.125em;
+      left: 0;
+      position: absolute;
+      top: 0.25em;
+      width: 1em; }
+
+.menu {
+  background-color: #fff;
+  box-shadow: 0 0 0.5rem #989ad7;
+  display: none;
+  position: absolute;
+  right: 1.7rem;
+  top: 2.25rem; }
+  .menu li {
+    border-bottom: 1px solid #989ad7; }
+  .menu a {
+    display: inline-block;
+    padding: .5em 1.5rem;
+    width: 100%; }
+    .menu a:hover {
+      background-color: #484cc4;
+      color: #fff; }
+
+.aside__menu--showed {
+  display: block; }
+
+.contact-list ul {
+  display: flex;
+  flex-direction: column; }
+.contact-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: .5em .5rem; }
+  .contact-list li:hover {
+    background-color: #484cc4; }
+.contact-list .user-info {
+  flex-grow: 1;
+  margin: 0 .8rem; }
+.contact-list p {
+  font-size: .7em; }
+.contact-list .user-name {
+  font-size: .8em; }
+.contact-list .timer {
+  align-self: center;
+  background-color: #3a3c8e;
+  border-radius: 15px;
+  font-size: .6em;
+  margin-right: 1rem;
+  min-width: 40px;
+  padding: .5em .4rem;
+  text-align: center; }
+.contact-list .user--active {
+  background-color: #f23f79; }
+  .contact-list .user--active:hover {
+    background-color: #f23f79; }
+  .contact-list .user--active .timer {
+    background-color: #fff;
+    color: #f23f79; }
+
+.messages-part {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+  width: 60%; }
+  @media screen and (max-width: 420px) {
+    .messages-part {
+      width: 0; } }
+  @media screen and (min-width: 421px) and (max-width: 1030px) {
+    .messages-part {
+      width: 50%; } }
+  .messages-part .conversation {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; }
+  .messages-part .message {
+    display: flex;
+    flex-direction: row;
+    font-size: .7rem;
+    margin: 1rem; }
+  .messages-part .photo {
+    align-self: flex-end; }
+  .messages-part .message-text {
+    border-radius: .25rem;
+    padding: 1.25rem 2em;
+    max-width: 50%;
+    position: relative; }
+  .messages-part .time {
+    position: absolute;
+    color: lightgrey;
+    bottom: -1rem;
+    font-size: .5rem; }
+
+.incoming-message {
+  color: #fff; }
+  .incoming-message .photo {
+    margin-right: .5rem; }
+  .incoming-message .message-text {
+    background-color: #989ad7; }
+  .incoming-message .time {
+    right: 0; }
+
+.outcoming-message {
+  justify-content: flex-end; }
+  .outcoming-message .photo {
+    order: 2;
+    margin-left: .5rem; }
+  .outcoming-message .message-text {
+    background-color: #f1f1fb; }
+  .outcoming-message .time {
+    left: 0; }
+
+.message-field-container textarea {
+  border-radius: 1.5rem;
+  height: 2rem;
+  margin: 1rem;
+  padding: 1em 1rem;
+  width: 70%; }
+
+/*# sourceMappingURL=mainstyles.css.map */

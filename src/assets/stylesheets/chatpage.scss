@@ -1,0 +1,30 @@
+@import "mixins";
+
+.chat-page {
+	@include display-flex (row);
+	align-items: stretch;
+	font-size: .8rem;
+	min-height: 100%;
+	width: 100%;
+	overflow:hidden;
+
+	input {
+		background-color: $input-bg-violet;
+		border-radius: .75rem;
+		font-size: .6rem;	
+	}
+
+	textarea {
+		@extend input;
+	}
+
+	.photo {
+		background: url("../pics/beagle.png");
+		background-position: -12px 0;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		height: 40px;
+		min-width: 40px;
+	}
+}
+

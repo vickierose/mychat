@@ -5,11 +5,11 @@
 
 
 	function changeTab (enablingHeading, disablingHeading, showingTab, hidingTab) {
-		if (!enablingHeading.classList.contains("active-tab")){
-			enablingHeading.classList.add("active-tab");
+		if (!enablingHeading.classList.contains("tab--active")){
+			enablingHeading.classList.add("tab--active");
 		}
-		if(disablingHeading.classList.contains("active-tab")){
-		disablingHeading.classList.remove("active-tab");
+		if(disablingHeading.classList.contains("tab--active")){
+		disablingHeading.classList.remove("tab--active");
 	}
 
 		showingTab.style.display = "flex";

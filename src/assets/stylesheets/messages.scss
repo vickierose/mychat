@@ -1,0 +1,45 @@
+@import "mixins";
+.messages-part {
+	@include display-flex (column);
+	flex-grow: 1;
+	overflow: auto; 
+	width: 60%;
+
+	@media screen and (max-width: 420px) {
+    	width: 0;
+	}
+	
+	@media screen and (min-width: 421px) and (max-width: 1030px) {
+		width: 50%;
+	}
+
+	.conversation {
+		@include display-flex (column);
+		flex-grow: 1;
+	}
+
+	.message {
+		@include display-flex (row);
+		font-size: .7rem;
+		margin: 1rem;
+	}
+
+	.photo {
+		align-self: flex-end;
+	}
+
+	.message-text {
+    	border-radius: .25rem;
+   		padding: 1.25rem 2em;
+    	max-width: 50%;
+    	position: relative;	
+			}
+
+	.time {
+    	position: absolute;
+    	color: lightgrey;
+    	bottom: -1rem;
+   		font-size: .5rem;
+    }
+}
+

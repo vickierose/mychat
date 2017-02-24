@@ -4,17 +4,17 @@ var arrowButton = document.getElementsByClassName("arrow-icon")[0];
 var menuButton = document.getElementsByClassName("sandwich-icon")[0];
 
 function resizeContactList () {
-	aside.classList.toggle("closed-state");
+	aside.classList.toggle("aside--closed");
 
-	if (menu.classList.contains("showed-menu")) {
-		menu.classList.remove("showed-menu");
+	if (menu.classList.contains("aside__menu--showed")) {
+		menu.classList.remove("aside__menu--showed");
 	};
 }
 
 arrowButton.addEventListener("click", resizeContactList);
 
 function toggleMenu () {
-	menu.classList.toggle("showed-menu");
+	menu.classList.toggle("aside__menu--showed");
 }
 
 menuButton.addEventListener("click", toggleMenu);

@@ -1,0 +1,20 @@
+@import "mixins";
+
+.forms-content {
+	@include display-flex (column);
+	border: 1px solid $forms-border-violet;
+	border-radius: 10px;
+    box-shadow: 0 0 10px $forms-border-violet;
+	font-size: .8rem;
+	margin: auto; 
+	margin-top: 25%;
+	width: 300px;
+
+	@media screen and (max-width: 420px) {
+		border: none;
+    	border-radius: 0;
+    	box-shadow: none;
+    	margin: 0;
+    	width: 100vw;
+	}	
+}

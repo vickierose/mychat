@@ -2,7 +2,9 @@
 
 .contact-list {
 	ul {
-		@include display-flex (column);
+		// @include display-flex (column);
+		height: calc(100vh - 70px);
+		overflow-y: auto;
 	}
 
 	li {

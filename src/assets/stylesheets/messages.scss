@@ -5,23 +5,26 @@
 	overflow: auto; 
 	width: 60%;
 
-	@media screen and (max-width: 420px) {
+	@media screen and (max-width: 600px) {
     	width: 0;
 	}
 	
-	@media screen and (min-width: 421px) and (max-width: 1030px) {
+	@media screen and (min-width: 601px) and (max-width: 800px) {
 		width: 50%;
 	}
 
 	.conversation {
-		@include display-flex (column);
-		flex-grow: 1;
+		// @include display-flex (column);
+		// flex-grow: 1;
+		height: calc(100vh - 83px);
+    	overflow-y: auto;
+
 	}
 
 	.message {
 		@include display-flex (row);
 		font-size: .7rem;
-		margin: 1rem;
+		margin: 1.75rem;
 	}
 
 	.photo {

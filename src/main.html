@@ -1,149 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-	<title>MyChat</title>
-	<link rel="stylesheet" href="./assets/stylesheets/mainstyles.css">
+
+    //= html-templates/head-fragment.html
+
 </head>
 <body>
 
 <div class="chat-page">
     	 <aside>
 
-            <header>
-                <div class="arrow-icon">
-                    <div class="arrow-image"></div>
-                </div>
+            //= html-templates/aside__header.html
 
-                <form class="search-field">
-                    <input type="text" placeholder="Search">
-                </form>
+            //= html-templates/aside__sandwich__menu.html
 
-                <div class="sandwich-icon"></div>
-            </header>
-
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Log out</a></li>
-                </ul>
-            </nav>
-
-            <section class="contact-list">
-                <ul>
-                    <li class="contact">
-                        <div class="photo"></div>
-                        <div class="user-info">
-                            <p class="user-name">J J Abrams</p>
-                            <p>zzzzzzzzzzzzzzzzzz</p>
-                        </div>
-                        <div class="timer">24m</div>
-                    </li>
-
-                    <li class="contact">
-                        <div class="photo"></div>
-                        <div class="user-info">
-                            <p class="user-name">Amy Lee</p>
-                            <p>vvvvvvvvvvvvvvv</p>
-                        </div>
-                        <div class="timer">1h</div>
-                    </li>
-
-                    <li class="contact user--active">
-                        <div class="photo"></div>
-                        <div class="user-info">
-                            <p class="user-name">Annie Garcia</p>
-                            <p>ggggggggggggggggggggggggg</p>
-                        </div>
-                        <div class="timer">now</div>
-                    </li>
-
-                    <li class="contact">
-                        <div class="photo"></div>
-                        <div class="user-info">
-                            <p class="user-name">Heather May</p>
-                            <p>gjfjdngd</p>
-                        </div>
-                        <div class="timer">12m</div>
-                    </li>
-
-                     <li class="contact">
-                        <div class="photo"></div>
-                        <div class="user-info">
-                            <p class="user-name">Heather May</p>
-                            <p>gjfjdngd</p>
-                        </div>
-                        <div class="timer">12m</div>
-                    </li>
-
-                     <li class="contact">
-                        <div class="photo"></div>
-                        <div class="user-info">
-                            <p class="user-name">Heather May</p>
-                            <p>gjfjdngd</p>
-                        </div>
-                        <div class="timer">12m</div>
-                    </li>
-
-                     <li class="contact">
-                        <div class="photo"></div>
-                        <div class="user-info">
-                            <p class="user-name">Heather May</p>
-                            <p>gjfjdngd</p>
-                        </div>
-                        <div class="timer">12m</div>
-                    </li>
-                </ul>
-            </section>
+            //= html-templates/aside__contact-list.html
 
         </aside>
 
         <section class="messages-part">
-            <section class="conversation">
 
-                <section class="message incoming-message">
-                    <div class="photo"></div>
-                    <div class="message-text">
-                        <span>text texttexttext texttext text text text texttext
-                        text texttexttext texttext text text text texttext text texttexttext texttext text text text texttext text texttexttext texttext text text text texttext text texttexttext texttext text text text texttext
-                        </span>
-                        <div class="time">12:22</div>
-                    </div>
-                </section>
+            //= html-templates/messages__conversation.html
 
-                <section class="message outcoming-message">
-                    <div class="photo"></div>
-                    <div class="message-text">
-                        <span>tex ttext texttexttext texttext text text text text
-                        text texttexttext texttext text text text texttext text texttexttext texttext text text text texttext text texttexttext texttext text text text texttext text texttexttext texttext text text text texttext text texttexttext texttext text text text texttext</span>
-                        <div class="time">12:40</div>
-                    </div>
-                </section>
+            //= html-templates/messages__input-field.html
 
-                <section class="message incoming-message">
-                    <div class="photo"></div>
-                    <div class="message-text">
-                        <span>texttext texttext text text text texttext texttext</span>
-                        <div class="time">13:15</div>
-                    </div>
-                </section>
-
-                <section class="message outcoming-message">
-                    <div class="photo"></div>
-                    <div class="message-text">
-                        <span>text texttext texttext text texttext texttexttext</span>
-                        <div class="time">18:13</div>
-                    </div>
-                </section>
-
-            </section>
-
-            <form class="message-field-container">
-                <textarea placeholder="Type message"></textarea>
-            </form>
         </section>
     </div>
 
